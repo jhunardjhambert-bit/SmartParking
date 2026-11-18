@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivarez College Smart Parking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- WELCOME -->
+<section id="welcome" class="screen active">
+  <h1>Olivarez College Smart Parking</h1>
+  <img src="images/logo.png" alt="Olivarez College logo" class="wlogo">
+  <button id="continue" class="btn-green">CONTINUE</button>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="screen">
+  <button id="closeLogin" class="xbtn" title="Back" aria-label="Back">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+  </button>
+  <img src="images/logo.png" alt="Olivarez College logo" class="loginlogo">
+  <div class="card">
+    <h2>Log in</h2>
+    <label>ID:<input id="uid" type="text" autocomplete="off"></label>
+    <label>Password:<input id="pw" type="password"></label>
+    <button id="confirm" class="btn-green">CONFIRM</button>
+  </div>
+</section>
+
+<!-- PARKING -->
+<section id="app" class="screen">
+  <aside>
+    <img src="images/logo.png" alt="Olivarez College" class="slogo">
+    <nav id="nav"></nav>
+    <div class="tools">
+      <button id="rec">Parking Records</button>
+    </div>
+    <p class="foot">OLIVAREZ COLLEGE</p>
+  </aside>
+  <main>
+    <header>
+      <div class="pbox">P</div><div class="bar"></div>
+      <div class="titles">
+        <h1 id="floorTitle">Floor 1</h1>
+        <p id="floorSub">Slots A1 &ndash; A40</p>
+      </div>
+      <div class="legend">
+        <span class="tag tag-occ"><i></i>Spot Occupied: <b id="cntOcc">0</b></span>
+        <span class="tag tag-avail"><i></i>Spot Available: <b id="cntAvail">0</b></span>
+      </div>
+      <button id="logout" class="pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>Log out
+      </button>
+    </header>
+    <div class="panel">
+      <div class="side" id="left"></div>
+      <div class="lane"><span>&uarr;</span><i></i><span>&darr;</span></div>
+      <div class="side" id="right"></div>
+    </div>
+
+    <section id="records">
+      <div class="rtop">
+        <div class="tabs" id="tabs">
+          <button class="tab on" data-t="current">Currently Parked</button>
+          <button class="tab" data-t="history">History</button>
+        </div>
+        <input id="search" type="text" placeholder="Search slot or plate...">
+      </div>
+      <div class="tablewrap"><table id="rtable"></table></div>
+    </section>
+  </main>
+</section>
+
+<!-- DIALOG (replaces Java JOptionPane) -->
+<div id="modal"><div class="box">
+  <h4 id="mt"></h4><p id="mm"></p>
+  <input id="mi" type="text" hidden>
+  <div class="row"><button id="mc" class="btn-gray">No</button><button id="mo" class="btn-green">Yes</button></div>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
