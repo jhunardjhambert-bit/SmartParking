@@ -16,7 +16,7 @@ button{font-family:inherit;cursor:pointer}
 #continue{width:clamp(220px,25vw,332px);height:60px;font-size:clamp(1.3rem,2.4vw,2.2rem);margin-top:2vh}
 
 /* ---------- login ---------- */
-#login{background:url(images/bago.png) center/cover;align-items:center;justify-content:center}
+#login{background:url(images/damn.png) center/cover;align-items:center;justify-content:center}
 .loginlogo{position:absolute;top:2.5vh;left:50%;transform:translateX(-50%);height:clamp(110px, 25vh, 230px);width:auto;
   filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
 @media (max-height:560px){ .loginlogo{height:70px} }
